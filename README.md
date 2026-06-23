@@ -4,8 +4,6 @@
 
 A self-contained HTML report synthesizing consumer qualitatives and accompanied shopalongs with Sari-Sari Store Owners in Greater Manila Area. The work surfaces three Jobs-to-Be-Done that govern how storeowners stock, source, and compete — and translates each into channel strategy recommendations.
 
-Live: [leilistiic.github.io/sss-owner-insights](https://leilistiic.github.io/sss-owner-insights)
-
 ---
 
 ![Hero](assets/preview-01-hero.png)
