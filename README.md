@@ -6,10 +6,6 @@ A self-contained HTML report synthesizing consumer qualitatives and accompanied 
 
 ---
 
-![Hero](assets/preview-01-hero.png)
-
----
-
 ## What this covers
 
 **JTBD 1 — Assortment**
@@ -20,16 +16,6 @@ Weekly cash velocity drives every restocking decision. Bundle packs (6+1, 11+1) 
 
 **JTBD 3 — Business Continuity**
 She multi-sources across 2–3 channels monthly to manage out-of-stock risk. Supplier choice is governed first by service reliability and proximity, then by assortment breadth, then by promo chassis (rebates, sale events, points). Switching happens once a supplier proves reliability.
-
----
-
-## Previews
-
-| Section | Preview |
-|---|---|
-| JTBD 1 · Assortment | ![JTBD 1](assets/preview-02-jtbd1.png) |
-| JTBD 2 · Financial Ease | ![JTBD 2](assets/preview-03-jtbd2.png) |
-| JTBD 3 · Business Continuity | ![JTBD 3](assets/preview-04-jtbd3.png) |
 
 ---
 
@@ -48,19 +34,3 @@ sss-owner-insights/
 
 No build step. No framework. Open `index.html` directly in a browser or deploy via GitHub Pages.
 
----
-
-## Design notes
-
-- Terracotta and dark charcoal palette — references the painted-wall aesthetic of the store environment
-- Consumer verbatims rendered as pull quotes in *Lora* italic — foregrounds qualitative voice alongside quantitative signal
-- All data illustrative; verbatims anonymized; no proprietary figures reproduced
-
----
-
-## Context
-
-Part of a broader portfolio of consumer and channel analytics tools. See also:
-- [Shopper-Mission Ranging Console](https://leilistiic.github.io/drug-channel-ranging)
-- [Distribution Correlation Console](https://leilistiic.github.io/distribution-correlation)
-- [Category Growth Console](https://leilistiic.github.io/category-growth-console)
