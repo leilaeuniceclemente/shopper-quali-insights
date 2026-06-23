@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>How to Win in PH Sari-Sari Stores</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Inter:wght@300;400;500;600&family=Lora:ital@1&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:        #FAF7F4;
+    --bg-dark:   #1C1612;
+    --bg-panel:  #F2EDE8;
+    --bg-panel2: #EDE5DC;
+    --terracotta:#C4602A;
+    --gold:      #C4963A;
+    --charcoal:  #2A2520;
+    --body-text: #3D3530;
+    --muted:     #7A6E67;
+    --border:    #D9CFC5;
+    --white:     #FFFFFF;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--body-text);
+    font-size: 15px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg-dark);
+    border-bottom: 1px solid #3A3028;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+  }
+
+  .nav-brand {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--white); }
+
+  .hero {
+    background: var(--bg-dark);
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 100%, rgba(196,96,42,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--white);
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+
+  .hero-meta {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 3rem;
+    letter-spacing: 0.04em;
+  }
+
+  .exec-summary {
+    max-width: 820px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 4px;
+    padding: 2rem 2.5rem;
+    text-align: left;
+  }
+
+  .exec-summary h2 {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .exec-summary p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .exec-summary p:last-child { margin-bottom: 0; }
+
+  .exec-bets {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .exec-bet {
+    flex: 1;
+    min-width: 180px;
+    background: rgba(196,96,42,0.15);
+    border: 1px solid rgba(196,96,42,0.3);
+    border-radius: 3px;
+    padding: 1rem 1.2rem;
+  }
+
+  .exec-bet .bet-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--terracotta);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .exec-bet p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .method-bar {
+    background: var(--border);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .method-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .method-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    flex-shrink: 0;
+  }
+
+  .jtbd-section { padding: 5rem 2rem; }
+  .jtbd-section:nth-child(odd) { background: var(--bg); }
+  .jtbd-section:nth-child(even) { background: var(--bg-panel); }
+
+  .jtbd-inner { max-width: 1060px; margin: 0 auto; }
+
+  .jtbd-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem 2rem;
+    align-items: start;
+    margin-bottom: 3.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .jtbd-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--terracotta);
+    line-height: 1;
+    opacity: 0.25;
+    user-select: none;
+    padding-top: 0.2rem;
+  }
+
+  .jtbd-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 0.5rem;
+  }
+
+  .jtbd-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--charcoal);
+    margin-bottom: 0.8rem;
+  }
+
+  .jtbd-subhead {
+    font-size: 14px;
+    color: var(--muted);
+    max-width: 620px;
+    line-height: 1.7;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .content-grid.asymmetric { grid-template-columns: 3fr 2fr; }
+
+  @media (max-width: 720px) {
+    .content-grid, .content-grid.asymmetric { grid-template-columns: 1fr; }
+    .jtbd-header { grid-template-columns: 1fr; }
+    .jtbd-num { display: none; }
+    nav { padding: 0 1rem; }
+    .nav-links { gap: 1rem; }
+  }
+
+  .insight-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.5rem;
+  }
+
+  .jtbd-section:nth-child(even) .insight-card { background: var(--bg); }
+
+  .insight-card h3 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.8rem;
+  }
+
+  .insight-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--body-text);
+  }
+
+  .corr-pair {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+
+  .corr-card {
+    flex: 1;
+    min-width: 200px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .jtbd-section:nth-child(even) .corr-card { background: var(--bg); }
+
+  .corr-pct {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--terracotta);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .corr-label { font-size: 13px; color: var(--body-text); line-height: 1.5; }
+  .corr-label strong { display: block; font-size: 14px; color: var(--charcoal); }
+
+  .verbatim-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .verbatim-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.5rem 1.5rem 1.2rem;
+    position: relative;
+  }
+
+  .jtbd-section:nth-child(even) .verbatim-card { background: var(--bg); }
+
+  .verbatim-card::before {
+    content: '\201C';
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    color: var(--terracotta);
+    opacity: 0.2;
+    position: absolute;
+    top: 0.2rem;
+    left: 1rem;
+    line-height: 1;
+  }
+
+  .verbatim-text {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--charcoal);
+    padding-top: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .verbatim-attribution {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+  }
+
+  .data-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    margin: 1rem 0;
+  }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+
+  thead { background: var(--bg-dark); color: var(--white); }
+
+  thead th {
+    padding: 0.7rem 1rem;
+    text-align: left;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  tbody tr:nth-child(odd) { background: var(--white); }
+  tbody tr:nth-child(even) { background: var(--bg); }
+  .jtbd-section:nth-child(even) tbody tr:nth-child(odd) { background: var(--bg-panel); }
+  .jtbd-section:nth-child(even) tbody tr:nth-child(even) { background: var(--bg); }
+
+  tbody td {
+    padding: 0.65rem 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--body-text);
+  }
+
+  .td-brand { font-weight: 600; color: var(--charcoal); }
+  .td-neg { color: var(--terracotta); font-weight: 600; }
+  .td-pos { color: #2E7D52; font-weight: 600; }
+  .td-neutral { color: var(--muted); }
+
+  .rec-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .rec-section h3 {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+  }
+
+  .rec-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .rec-item {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding: 1rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--terracotta);
+    border-radius: 0 3px 3px 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--body-text);
+  }
+
+  .jtbd-section:nth-child(even) .rec-item { background: var(--bg); }
+
+  .rec-item strong {
+    display: block;
+    font-weight: 600;
+    color: var(--charcoal);
+    font-size: 12px;
+    margin-bottom: 0.2rem;
+  }
+
+  .driver-table {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+
+  .driver-row { display: contents; }
+
+  .driver-rank {
+    background: var(--bg-dark);
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .driver-content {
+    background: var(--white);
+    padding: 0.9rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .jtbd-section:nth-child(even) .driver-content { background: var(--bg); }
+
+  .driver-name { font-weight: 600; font-size: 13px; color: var(--charcoal); margin-bottom: 0.2rem; }
+  .driver-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .driver-rank:last-of-type, .driver-content:last-of-type { border-bottom: none; }
+
+  .section-rule {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-rule span {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .section-rule::before, .section-rule::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .implication {
+    background: rgba(196,96,42,0.08);
+    border-left: 3px solid var(--terracotta);
+    padding: 0.9rem 1.2rem;
+    border-radius: 0 3px 3px 0;
+    margin: 1rem 0;
+    font-size: 13px;
+    color: var(--charcoal);
+    line-height: 1.6;
+  }
+
+  .implication strong {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  footer {
+    background: var(--bg-dark);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  footer p { font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.7; }
+  footer .footer-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.5rem;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-brand">Sari-Sari Store · Consumer Qualitatives</span>
+  <ul class="nav-links">
+    <li><a href="#jtbd1">Assortment</a></li>
+    <li><a href="#jtbd2">Financial Ease</a></li>
+    <li><a href="#jtbd3">Continuity</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <p class="hero-eyebrow">Consumer Qualitatives · Shopalongs · Greater Manila Area</p>
+  <h1>How to Win in<br><em>Sari-Sari Stores</em></h1>
+  <p class="hero-meta">Female 25+ Sari-Sari Store Owners · Consumer Qualitatives + Shopalongs · GMA</p>
+
+  <div class="exec-summary">
+    <h2>Executive Summary</h2>
+    <p>Three trends have reshaped the high-frequency store landscape in the past two years: <strong>increased multi-sourcing within wholesale</strong>, the <strong>expansion of hard discounters</strong> introducing new competitive pressure on price, and <strong>consumers trading up</strong> to next sizes and forms.</p>
+    <p>To win in this channel, brands must win with Sari-Sari Store Owners through three big bets:</p>
+    <div class="exec-bets">
+      <div class="exec-bet">
+        <div class="bet-num">01</div>
+        <p>Drive category assortment depth across store tiers</p>
+      </div>
+      <div class="exec-bet">
+        <div class="bet-num">02</div>
+        <p>Increase bundle pack availability in wholesale stores</p>
+      </div>
+      <div class="exec-bet">
+        <div class="bet-num">03</div>
+        <p>Participate in retailer chassis that matter to her</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="method-bar">
+  <div class="method-item"><span class="method-dot"></span> Consumer qualitatives</div>
+  <div class="method-item"><span class="method-dot"></span> Accompanied shopalongs</div>
+  <div class="method-item"><span class="method-dot"></span> Greater Manila Area</div>
+  <div class="method-item"><span class="method-dot"></span> Female 25+ SSS Owners</div>
+  <div class="method-item"><span class="method-dot"></span> Quant + qual triangulation</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     JTBD 1 — ASSORTMENT
+     ═══════════════════════════════════════════════ -->
+<section class="jtbd-section" id="jtbd1">
+  <div class="jtbd-inner">
+
+    <div class="jtbd-header">
+      <div class="jtbd-num">01</div>
+      <div class="jtbd-meta">
+        <div class="jtbd-label">Jobs-to-Be-Done #1 · Assortment</div>
+        <h2 class="jtbd-headline">Help me stay ahead of other Sari-Sari stores<br>and the Discounter with the right variety of SKUs.</h2>
+        <p class="jtbd-subhead">Assortment is her competitive moat. The Discounter wins on price but has gaps on trusted brands — making variety the SSS owner's sharpest edge against both neighboring stores and hard discounters.</p>
+      </div>
+    </div>
+
+    <div class="section-rule"><span>Core Insight</span></div>
+    <div class="content-grid">
+      <div class="insight-card">
+        <h3>The Discounter's threat and her edge</h3>
+        <p>Hard discounters are accelerating expansion into residential barangays. Their strength is price via housebrands; their gap is branded assortment. The SSS owner wins when she is <em>kumpleto</em> — complete. Out-of-stock on a core SKU doesn't just lose the sale; it loses the customer.</p>
+        <div class="implication">
+          <strong>Implication</strong>
+          Drive more categories and variants into the channel so SSS Owners stay ahead of local competition.
+        </div>
+      </div>
+      <div class="insight-card">
+        <h3>Category carrying rates vs. prior year (dummy data)</h3>
+        <p style="margin-bottom:1rem;">Despite store coverage growth across tiers, category carrying rates <strong>declined year-on-year</strong> — meaning broader reach is not translating into deeper assortment. Gaps were most pronounced at smaller store tiers, particularly in categories with lower baseline penetration.</p>
+        <div class="data-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Category Group</th>
+                <th>Wholesale</th>
+                <th>Small</th>
+                <th>Mid</th>
+                <th>Large</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="td-brand">Category A</td><td>High <span class="td-neg">▾slight</span></td><td>Med-High <span class="td-neg">▾mod</span></td><td>High <span class="td-neg">▾slight</span></td><td>High <span class="td-neg">▾slight</span></td></tr>
+              <tr><td class="td-brand">Category B</td><td>High <span class="td-neg">▾slight</span></td><td>Med <span class="td-neg">▾mod</span></td><td>Med-High <span class="td-neg">▾mod</span></td><td>High <span class="td-neg">▾slight</span></td></tr>
+              <tr><td class="td-brand">Category C</td><td>Med-High <span class="td-neutral">–</span></td><td>Low-Med <span class="td-neg">▾slight</span></td><td>Med <span class="td-neg">▾steep</span></td><td>Med-High <span class="td-neg">▾mod</span></td></tr>
+              <tr><td class="td-brand">Category D</td><td>High <span class="td-neg">▾slight</span></td><td>Med <span class="td-pos">▴slight</span></td><td>Med-High <span class="td-neg">▾mod</span></td><td>High <span class="td-neg">▾slight</span></td></tr>
+              <tr><td class="td-brand">Category E</td><td>High <span class="td-neg">▾slight</span></td><td>Med <span class="td-pos">▴slight</span></td><td>Med-High <span class="td-pos">▴slight</span></td><td>High <span class="td-neg">▾slight</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-rule"><span>Consumer Voice</span></div>
+    <div class="verbatim-grid">
+      <div class="verbatim-card">
+        <p class="verbatim-text">Competition in my area increased when the Discounter opened nearby, but they don't have enough variety. The more complete my store is, the more people will still go to me.</p>
+        <span class="verbatim-attribution">SSS Owner · High-competition barangay</span>
+      </div>
+      <div class="verbatim-card">
+        <p class="verbatim-text">Majority of what the Discounter has are housebrands. While they are significantly cheaper, people are still hesitant because they're not necessarily worth it. My customers look for brands they trust, and they get them through me.</p>
+        <span class="verbatim-attribution">SSS Owner · Near Discounter</span>
+      </div>
+      <div class="verbatim-card">
+        <p class="verbatim-text">If I am out-of-stock of a SKU my customer is looking for, I do my best to recommend a similar product. But they're extremely loyal to that specific variant or only have enough budget for a particular size. I need to make sure it's always available.</p>
+        <span class="verbatim-attribution">SSS Owner · GMA</span>
+      </div>
+      <div class="verbatim-card">
+        <p class="verbatim-text">I started selling a newer product format when I noticed changing habits in my area. Soon enough, more regular customers who used to buy the old format started asking for the new one.</p>
+        <span class="verbatim-attribution">SSS Owner · Trading-up pioneer</span>
+      </div>
+      <div class="verbatim-card">
+        <p class="verbatim-text">I make sure I always have the right products because my store is near a wet market. The people there always buy from me — I just need to keep the categories they need in stock at a competitive price.</p>
+        <span class="verbatim-attribution">SSS Owner · Near wet market</span>
+      </div>
+      <div class="verbatim-card">
+        <p class="verbatim-text">My customers didn't plan to buy the bundle size, but I carried it and convinced them because of the savings it provides per use. Now it holds a permanent place on my shelf.</p>
+        <span class="verbatim-attribution">SSS Owner · Proactive adopter</span>
+      </div>
+    </div>
+
+    <div class="rec-section">
+      <h3>Recommendations</h3>
+      <div class="rec-list">
+        <div class="rec-item">
+          <div>
+            <strong>Priority: Low-penetration categories in Wholesale</strong>
+            Drive assortment starting with the categories showing the steepest carrying rate decline at wholesale tier.
+          </div>
+        </div>
+        <div class="rec-item">
+          <div>
+            <strong>Proximity-based SKU push</strong>
+            Near wet markets → food-adjacent and cooking-related categories. Near service establishments → categories relevant to their customer's activity. Near schools → hygiene and grooming categories.
+          </div>
+        </div>
+        <div class="rec-item">
+          <div>
+            <strong>Seasonality sell-in</strong>
+            Rainy season → hygiene-benefit variants. Year-end season → categories with high gifting and celebration occasions. Summer → refreshing and grooming categories.
+          </div>
+        </div>
+        <div class="rec-item">
+          <div>
+            <strong>Map high-competition clusters</strong>
+            Identify barangays with multiple SSS + nearby Discounters. Sell in missing core categories, then introduce next variants in existing ones.
+          </div>
+        </div>
+        <div class="rec-item">
+          <div>
+            <strong>New SKU demand generation</strong>
+            Bundle new SKUs with proven fast-movers. Run retailer trial programs with proof-of-performance data to disrupt autopilot replenishment behavior.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     JTBD 2 — FINANCIAL EASE
+     ═══════════════════════════════════════════════ -->
+<section class="jtbd-section" id="jtbd2">
+  <div class="jtbd-inner">
+
+    <div class="jtbd-header">
+      <div class="jtbd-num">02</div>
+      <div class="jtbd-meta">
+        <div class="jtbd-label">Jobs-to-Be-Done #2 · Financial Ease</div>
+        <h2 class="jtbd-headline">Make it easy for me to build stock,<br>strengthen margins, and keep my cash moving weekly.</h2>
+        <p class="jtbd-subhead">Weekly cash velocity is the heartbeat of her business. Bundle packs are her preferred mechanism — not just for margin, but as reinvestable capital that keeps her shelves stocked between trips.</p>
+      </div>
+    </div>
+
+    <div class="section-rule"><span>Core Insight</span></div>
+    <div class="content-grid">
+      <div class="insight-card">
+        <h3>Bundle packs as margin engine + cash flow tool</h3>
+        <p>Multi-unit bundle packs (e.g. 6+1, 11+1 configs) are the most sought-after promo format — preferred over percentage discounts or peso-savings messaging. To SSS owners, bundles are not a discount; they are a <em>freebie to sell at full price</em>, generating additional capital that flows back into next-trip restocking.</p>
+        <p style="margin-top:0.8rem;">Broad-based bundle pack availability in wholesale stores shows strong positive correlation with store penetration growth across the portfolio.</p>
+        <div class="implication">
+          <strong>Implication</strong>
+          To grow store penetration, drive bundle pack availability across wholesale. Match her replenishment cycle: weekly.
+        </div>
+      </div>
+      <div class="insight-card">
+        <h3>Bundle availability × store penetration correlation (illustrative)</h3>
+        <div class="corr-pair" style="margin-bottom:1.5rem;">
+          <div class="corr-card">
+            <div class="corr-pct">~75%</div>
+            <div class="corr-label">
+              <strong>Category A · Core SKU</strong>
+              Bundle availability vs. store penetration
+            </div>
+          </div>
+          <div class="corr-card">
+            <div class="corr-pct">~70%</div>
+            <div class="corr-label">
+              <strong>Category B · Core SKU</strong>
+              Bundle availability vs. store penetration
+            </div>
+          </div>
+        </div>
+        <p style="font-size:13px; color:var(--muted);">Strong positive correlation between bundle pack availability in wholesale and broader store penetration — suggesting bundles act as a stocking signal for the full portfolio.</p>
+      </div>
+    </div>
+
+    <div class="section-rule"><span>The Problem: SKUs Losing Share Behind Store Penetration Decline (Dummy Data)</span></div>
+    <div class="data-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>SKU Type</th>
+            <th>Share</th>
+            <th>Share vYA</th>
+            <th>% Contrib to Decline</th>
+            <th>Store Penetration</th>
+            <th>Penetration vYA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="td-brand">Category A</td><td>Small format</td><td>~15%</td><td class="td-neg">↓</td><td>high</td><td>medium-high</td><td class="td-neg">↓ steep</td></tr>
+          <tr><td class="td-brand">Category B</td><td>Sachet</td><td>~11%</td><td class="td-neg">↓</td><td>high</td><td>high</td><td class="td-neg">↓ slight</td></tr>
+          <tr><td class="td-brand">Category C</td><td>Sachet · Variant 1</td><td>~16%</td><td class="td-neg">↓</td><td>negative drag</td><td>medium</td><td class="td-neg">↓ mod</td></tr>
+          <tr><td class="td-brand">Category C</td><td>Sachet · Variant 2</td><td>~12%</td><td class="td-neg">↓</td><td>negative drag</td><td>medium</td><td class="td-neg">↓ mod</td></tr>
+          <tr><td class="td-brand">Category C</td><td>Sachet · Variant 3</td><td>~3%</td><td class="td-neg">↓</td><td>negative drag</td><td>low</td><td class="td-neg">↓ mod</td></tr>
+          <tr><td class="td-brand">Category D</td><td>Sachet · Variant 1</td><td>~9%</td><td class="td-neg">↓</td><td>moderate</td><td>medium</td><td class="td-neg">↓ slight</td></tr>
+          <tr><td class="td-brand">Category D</td><td>Sachet · Variant 2</td><td>~9%</td><td class="td-neg">↓</td><td>moderate</td><td>medium</td><td class="td-neg">↓ mod</td></tr>
+          <tr><td class="td-brand">Category D</td><td>Sachet · Variant 3</td><td>~5%</td><td class="td-neg">↓</td><td>low</td><td>low-med</td><td class="td-neg">↓ mod</td></tr>
+          <tr><td class="td-brand">Category D</td><td>Sachet · Variant 4</td><td>~5%</td><td class="td-neg">↓</td><td>low</td><td>low-med</td><td class="td-neg">↓ steep</td></tr>
+          <tr><td class="td-brand">Category D</td><td>Refill format</td><td>~2%</td><td class="td-neg">↓</td><td>low</td><td>low</td><td class="td-neg">↓ mod</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-rule"><span>Consumer Voice</span></div>
+    <div class="verbatim-grid">
+      <div class="verbatim-card">
+        <p class="verbatim-text">My customers always look for the 6+1s. If it's not available, they will still buy the base SKU, but I notice that they purchase less from me overall.</p>
+        <span class="verbatim-attribution">Wholesale-sourcing SSS Owner</span>
+      </div>
+      <div class="verbatim-card">
+        <p class="verbatim-text">The bundle packs are a huge help to my business. I get to keep the extra unit's profit all to myself once I sell it. That's why I make sure I buy as many as I can in every shopping trip.</p>
+        <span class="verbatim-attribution">SSS Owner · Bundle pack buyer</span>
+      </div>
+      <div class="verbatim-card">
+        <p class="verbatim-text">Having more cash on my next shopping trip is more important than having my money stuck on a slow-moving item. I want my cash to keep moving since I could potentially sell more every week.</p>
+        <span class="verbatim-attribution">SSS Owner · Weekly restocking mindset</span>
+      </div>
+      <div class="verbatim-card">
+        <p class="verbatim-text">I am about to run out of some key products once the week is about to end. I make sure that I place my orders by Friday morning so that I receive them by the next day.</p>
+        <span class="verbatim-attribution">SSS Owner · Weekly cycle replenishment</span>
+      </div>
+    </div>
+
+    <div class="rec-section">
+      <h3>Recommendations</h3>
+      <div class="rec-list">
+        <div class="rec-item">
+          <div>
+            <strong>Targeted bundle push in wholesale</strong>
+            Focus on SKUs with simultaneous share and store penetration decline for a concentrated bundle pack push in wholesale channels.
+          </div>
+        </div>
+        <div class="rec-item">
+          <div>
+            <strong>In-store bundle visibility</strong>
+            Endcaps, wobblers, and shelf-strips at point-of-purchase to surface bundle configs where they're most visible.
+          </div>
+        </div>
+        <div class="rec-item">
+          <div>
+            <strong>Match weekly replenishment cadence</strong>
+            Promo comms and sell-in timed to her Friday order trigger — not monthly cycles.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     JTBD 3 — BUSINESS CONTINUITY
+     ═══════════════════════════════════════════════ -->
+<section class="jtbd-section" id="jtbd3">
+  <div class="jtbd-inner">
+
+    <div class="jtbd-header">
+      <div class="jtbd-num">03</div>
+      <div class="jtbd-meta">
+        <div class="jtbd-label">Jobs-to-Be-Done #3 · Business Continuity</div>
+        <h2 class="jtbd-headline">Keep my store open and ensure<br>I don't go out-of-stock.</h2>
+        <p class="jtbd-subhead">Operational certainty governs supplier choice. She multi-sources across 2–3 channels monthly to manage out-of-stock risk — and once a supplier earns reliability, promo chassis and rebates determine share of wallet.</p>
+      </div>
+    </div>
+
+    <div class="section-rule"><span>What drives supplier choice — in order</span></div>
+    <div class="content-grid asymmetric">
+      <div>
+        <div class="driver-table">
+          <div class="driver-row">
+            <div class="driver-rank">#1</div>
+            <div class="driver-content">
+              <div class="driver-name">Service</div>
+              <div class="driver-desc">Next-day delivery and nearby stores minimize transportation costs and store closures during restocking trips.</div>
+            </div>
+          </div>
+          <div class="driver-row">
+            <div class="driver-rank">#2</div>
+            <div class="driver-content">
+              <div class="driver-name">Assortment</div>
+              <div class="driver-desc">One-stop shop for all core SKUs — minimizes out-of-stock risk across her full category set in a single trip.</div>
+            </div>
+          </div>
+          <div class="driver-row">
+            <div class="driver-rank">#3</div>
+            <div class="driver-content">
+              <div class="driver-name">Promo Availability</div>
+              <div class="driver-desc">Bundle packs are freebies she sells at full price — they are capital, not just promotions.</div>
+            </div>
+          </div>
+          <div class="driver-row">
+            <div class="driver-rank">#4</div>
+            <div class="driver-content">
+              <div class="driver-name">Chassis</div>
+              <div class="driver-desc">Cashbacks, rebates, and sale events increase stock and capital for the next trip. Switching happens once reliability is proven.</div>
+            </div>
+          </div>
+        </div>
+        <div class="implication">
+          <strong>Implication</strong>
+          Strengthen partnerships with the wholesale and retail channels that matter most to her restocking behavior — service and chassis are the levers.
+        </div>
+      </div>
+      <div class="insight-card">
+        <h3>How she shops across channels</h3>
+        <p style="margin-bottom:1rem; font-size:13px;">Within a month, she shops 2–3 different supplier channels based on who best delivers on service and assortment:</p>
+        <div style="display:flex; flex-direction:column; gap:0.75rem;">
+          <div style="padding:0.9rem 1rem; background:var(--bg-panel); border-radius:3px; border-left:3px solid var(--terracotta);">
+            <div style="font-weight:600; font-size:12px; color:var(--charcoal); margin-bottom:0.2rem;">Discounter — rising frequency</div>
+            <div style="font-size:12px; color:var(--muted);">Walking distance, easy navigation, under 5 mins in-store. Proximity is the primary driver.</div>
+          </div>
+          <div style="padding:0.9rem 1rem; background:var(--bg-panel); border-radius:3px; border-left:3px solid var(--gold);">
+            <div style="font-weight:600; font-size:12px; color:var(--charcoal); margin-bottom:0.2rem;">Wholesale A — preferred for ordering</div>
+            <div style="font-size:12px; color:var(--muted);">Next-day delivery, site/app ordering — she doesn't have to close her store. Rebate chassis drives loyalty.</div>
+          </div>
+          <div style="padding:0.9rem 1rem; background:var(--bg-panel); border-radius:3px; border-left:3px solid var(--border);">
+            <div style="font-weight:600; font-size:12px; color:var(--charcoal); margin-bottom:0.2rem;">Wholesale B — secondary, for bulk events</div>
+            <div style="font-size:12px; color:var(--muted);">Least frequented for walk-in; requires store closure and commute. Visited primarily during sale events.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-rule"><span>Consumer Voice</span></div>
+    <div class="verbatim-grid">
+      <div class="verbatim-card">
+        <p class="verbatim-text">As much as possible, I buy what I can from the Discounter. It's just a short walk away from my store and it's easy to navigate. It takes less than five minutes to finish buying.</p>
+        <span class="verbatim-attribution">SSS Owner · Discounter primary shopper</span>
+      </div>
+      <div class="verbatim-card">
+        <p class="verbatim-text">It's so easy to order from my wholesale supplier. The site shows me everything that I need for my store. I can get everything the next day as long as I order in the morning.</p>
+        <span class="verbatim-attribution">SSS Owner · Wholesale ordering</span>
+      </div>
+      <div class="verbatim-card">
+        <p class="verbatim-text">I want my store to remain open as much as possible. I could lose more sales if I go to the supermarket more frequently — I'd have to close my shop to commute there.</p>
+        <span class="verbatim-attribution">SSS Owner · Store closure aversion</span>
+      </div>
+      <div class="verbatim-card">
+        <p class="verbatim-text">I enjoy the rebate perks because I can save enough points to buy more for my store during Christmas. I hold the points until year-end because that's when I need to buy more stock.</p>
+        <span class="verbatim-attribution">SSS Owner · Loyalty chassis</span>
+      </div>
+      <div class="verbatim-card">
+        <p class="verbatim-text">I make a scheduled trip whenever there's a big sale — there are huge discounts on items I need for my store, so I make sure to buy a little more than I usually would.</p>
+        <span class="verbatim-attribution">SSS Owner · Sale event shopper</span>
+      </div>
+      <div class="verbatim-card">
+        <p class="verbatim-text">I only buy from my wholesale supplier what I know will sell quickly. I worry about slow-moving inventory if I buy all my variants from one place.</p>
+        <span class="verbatim-attribution">SSS Owner · Basket concentration risk</span>
+      </div>
+    </div>
+
+    <div class="rec-section">
+      <h3>Recommendations</h3>
+      <div class="rec-list">
+        <div class="rec-item">
+          <div>
+            <strong>Surface promotion support at the channel level</strong>
+            Highlight bundle and promo availability behind the SKUs with the steepest store penetration decline in wholesale partner plans.
+          </div>
+        </div>
+        <div class="rec-item">
+          <div>
+            <strong>Activate rebate and points chassis</strong>
+            Rebates are perceived as capital returns for the next trip — they compound loyalty when tied to high-stocking windows like year-end.
+          </div>
+        </div>
+        <div class="rec-item">
+          <div>
+            <strong>Leverage sale event loading</strong>
+            Periodic bulk sale events are planned trips — an opportunity to drive deep loading of bundle packs and next sizes.
+          </div>
+        </div>
+        <div class="rec-item">
+          <div>
+            <strong>Strengthen digital ordering capability</strong>
+            App and site-based ordering is gaining share especially in larger stores. Friction-free ordering with next-day delivery is table stakes for retaining her wallet.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p class="footer-title">Sari-Sari Store Owner Qualitative Research</p>
+  <p>Consumer qualitatives and shopalongs · Greater Manila Area<br>
+  Illustrative data only. Verbatims anonymized. No proprietary figures reproduced.</p>
+</footer>
+
+</body>
+</html>
