@@ -25,7 +25,7 @@
     --white:     #FFFFFF;
   }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; width: 100%; }
 
   body {
     font-family: 'Inter', sans-serif;
@@ -33,6 +33,8 @@
     color: var(--body-text);
     font-size: 15px;
     line-height: 1.7;
+    width: 100%;
+    max-width: 100vw;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -47,6 +49,8 @@
     align-items: center;
     justify-content: space-between;
     height: 52px;
+    width: 100%;
+    max-width: 100vw;
   }
 
   .nav-brand {
@@ -271,30 +275,26 @@
   .content-grid.asymmetric { grid-template-columns: 3fr 2fr; }
 
   @media (max-width: 720px) {
-    .content-grid, .content-grid.asymmetric { grid-template-columns: 1fr; }
+    .content-grid, .content-grid.asymmetric { grid-template-columns: 1fr; max-width: 100%; }
     .jtbd-header { grid-template-columns: 1fr; }
     .jtbd-num { display: none; }
-    nav { padding: 0 1rem; }
+    nav { padding: 0 1rem; width: 100%; max-width: 100vw; }
     .nav-links { gap: 1rem; }
-
-    /* Nav links hide on very small screens */
     .nav-links { display: none; }
 
     /* Hero */
-    .hero { padding: 3rem 1.25rem 2.5rem; }
-    .exec-summary { padding: 1.25rem; }
+    .hero { padding: 3rem 1.25rem 2.5rem; max-width: 100%; }
+    .exec-summary { padding: 1.25rem; max-width: 100%; }
     .exec-bets { flex-direction: column; }
     .exec-bet { min-width: unset; }
 
-    /* Method bar */
-    .method-bar { gap: 1rem; padding: 0.75rem 1rem; }
-
     /* Sections */
-    .jtbd-section { padding: 3rem 1.25rem; }
+    .jtbd-section { padding: 3rem 1.25rem; max-width: 100%; overflow: hidden; }
+    .method-bar { gap: 1rem; padding: 0.75rem 1rem; }
 
     /* Corr cards stack */
     .corr-pair { flex-direction: column; }
-    .corr-card { min-width: unset; }
+    .corr-card { min-width: unset; max-width: 100%; }
 
     /* Driver table */
     .driver-table { grid-template-columns: 40px 1fr; }
@@ -302,14 +302,21 @@
 
     /* Verbatim grid single col */
     .verbatim-grid { grid-template-columns: 1fr; }
+    .verbatim-card { max-width: 100%; }
 
     /* Rec list single col */
     .rec-list { grid-template-columns: 1fr; }
 
     /* Tables scroll */
-    .data-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .data-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
     table { font-size: 12px; min-width: 480px; }
     thead th, tbody td { padding: 0.5rem 0.75rem; }
+
+    .section-rule span { white-space: normal; font-size: 9px; letter-spacing: 0.1em; }
+    .section-rule { align-items: flex-start; gap: 0.5rem; }
+
+    /* Insight cards */
+    .insight-card { max-width: 100%; overflow: hidden; }
 
     /* Footer */
     footer { padding: 2rem 1.25rem; }
